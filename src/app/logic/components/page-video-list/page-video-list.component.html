@@ -1,5 +1,13 @@
-<p>
-  Lista wszystkich filmów:
-</p>
-<button (click)="getMovies()">Wyświetl filmy w konsoli</button>
+<button (click)="logMovies()">Wyświetl filmy w konsoli</button>
+
+<div><input (keydown)="search($event)"></div>
+
+<h2>
+  Znalezione filmy:
+</h2>
+<app-video-list [movies]="foundMovies"></app-video-list>
+
+<h2>
+  Wszystkie filmy:
+</h2>
 <app-video-list [movies]="movies"></app-video-list>
