@@ -9,13 +9,15 @@ import { LogicModule } from './logic/logic.module';
 import { RouterModule } from '@angular/router';
 import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageContactComponent } from './components/page-contact/page-contact.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BackgroundColorDirective,
     PageHomeComponent,
-    PageContactComponent
+    PageContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     RouterModule,
