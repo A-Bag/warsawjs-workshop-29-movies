@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from '../../movies.service';
+import { MoviesService } from '../../../shared/movies.service';
 import { Movies } from '../../interfaces/movies.interface';
 
 @Component({

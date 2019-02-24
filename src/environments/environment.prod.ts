@@ -1,4 +1,7 @@
+const APP_URL = '/warsawjs-workshop-29-movies';
+
 export const environment = {
   production: true,
-  moviesUrl: '/warsawjs-workshop-29-movies/assets/data.json'
+  moviesUrl: APP_URL + '/assets/data.json',
+  bestMoviesUrl: APP_URL + '/assets/best-movies.json'
 };

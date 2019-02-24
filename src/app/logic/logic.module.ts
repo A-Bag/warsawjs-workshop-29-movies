@@ -4,19 +4,17 @@ import { PageVideoListComponent } from './components/page-video-list/page-video-
 import { PageVideoNotFoundComponent } from './components/page-video-not-found/page-video-not-found.component';
 import { PageVideoProfileComponent } from './components/page-video-profile/page-video-profile.component';
 import { LogicRoutingModule } from './logic-routing.module';
-import { MoviesService } from './movies.service';
 import { HttpClientModule } from '@angular/common/http';
-import { VideoListComponent } from './components/video-list/video-list.component';
-import { VideoListItemComponent } from './components/video-list-item/video-list-item.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [PageVideoListComponent, PageVideoNotFoundComponent, PageVideoProfileComponent, VideoListComponent, VideoListItemComponent],
+  declarations: [PageVideoListComponent, PageVideoNotFoundComponent, PageVideoProfileComponent],
   imports: [
     HttpClientModule,
     CommonModule,
-    LogicRoutingModule
+    LogicRoutingModule,
+    SharedModule
   ],
-  exports: [],
-  providers: [MoviesService]
+  exports: []
 })
 export class LogicModule { }

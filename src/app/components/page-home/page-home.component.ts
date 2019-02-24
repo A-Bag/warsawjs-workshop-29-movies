@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Movies } from '../../logic/interfaces/movies.interface';
+import { MoviesService } from '../../shared/movies.service';
 
 @Component({
   selector: 'app-page-home',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHomeComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  bestMovies: Movies = [];
 
-  ngOnInit() {
+  constructor(private moviesService: MoviesService) { }
+
+  async ngOnInit() {
+    this.bestMovies = await this.moviesService.fetchBestMovies();
   }
 
 }
