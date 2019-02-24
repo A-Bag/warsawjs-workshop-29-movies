@@ -576,7 +576,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    moviesUrl: '/assets/data.json'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as

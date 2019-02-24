@@ -2385,6 +2385,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MoviesService", function() { return MoviesService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2431,6 +2432,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 };
 
 
+
 var MoviesService = /** @class */ (function () {
     function MoviesService(http) {
         this.http = http;
@@ -2440,7 +2442,7 @@ var MoviesService = /** @class */ (function () {
             var response;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.http.get('/assets/data.json').toPromise()];
+                    case 0: return [4 /*yield*/, this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].moviesUrl).toPromise()];
                     case 1:
                         response = _a.sent();
                         return [2 /*return*/, response];
